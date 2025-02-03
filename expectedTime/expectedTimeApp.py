@@ -21,14 +21,13 @@ def showCurrentTime():
     
     now = datetime.now()
     
-    # print("Current local date and time :", now.strftime("%Y-%m-%d %H:%M-%S"))
-    # print("Expected time:")
+    # print("Current local date and time :", now.strftime("%Y-%m-%d %H:%M-%S")) 
+    # return ("Current loacl date-time:", now.strftime("%Y-%m-%d %H-%M-%D"))
     
-    #return ("Current loacl date-time:", now.strftime("%Y-%m-%d %H-%M-%D"))
+    # print("Expected time:")
     return (now+timedelta(days=int(dDel), minutes=int(mDel), hours=int(hDel))).strftime("%Y-%m-%d %H-%M-%S")
 
 if __name__ == "__main__":
-    # print("Current local date and time : ", showCurrentTime())
-    # print("Current local date and time : ", app.run()) ## print does not work here
+    # print("Current local date and time : ", showCurrentTime()) 
     app.run(port=7000)
     
