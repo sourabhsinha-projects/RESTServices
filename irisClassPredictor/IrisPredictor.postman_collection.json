@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "107ee79e-202e-4859-b4f1-8888c6e4c51e",
+		"name": "IrisPredictor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41741448"
+	},
+	"item": [
+		{
+			"name": "Get - Iris Predictor from query string",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/predict?s_len=5.6&s_wdt=2.7&p_len=4.2&p_wdt=1.3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					],
+					"query": [
+						{
+							"key": "s_len",
+							"value": "5.6"
+						},
+						{
+							"key": "s_wdt",
+							"value": "2.7"
+						},
+						{
+							"key": "p_len",
+							"value": "4.2"
+						},
+						{
+							"key": "p_wdt",
+							"value": "1.3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - Iris Predictor from file input",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "input_file",
+							"type": "file",
+							"src": "/C:/Users/Sinha/WorkSpace/RESTServices/irisClassPredictor/input.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/predict_file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"predict_file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
